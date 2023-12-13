@@ -15,7 +15,7 @@ import { Welcome } from "./Welcome";
 export function App(){
     return (
     <div>
-        <Welcome name="Laura" /> 
+        <Welcome name="Laura" age={28} /> 
     </div>
     )
 }{/* When I pass my name, it renders as Welcome, Laura! */}

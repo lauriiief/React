@@ -1,3 +1,8 @@
-export function Welcome({ name= 'Guest' }) {
-    return <p>Welcome, { name }!</p>
+export function Welcome({ name= 'Guest', age='undefined' }) {
+    return (
+        <div>
+                <p>Welcome, <strong>{ name }</strong>!</p>
+                <p>Your age is { age }</p>
+        </div>
+    )
 }
