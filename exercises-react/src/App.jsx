@@ -1,5 +1,6 @@
 import { Hello } from "./Hello";
 import { Message } from "./Message";
+import { Welcome } from "./Welcome";
 
 {/*export function App() {
     return (
@@ -14,7 +15,8 @@ import { Message } from "./Message";
 export function App(){
     return (
     <div>
-        <Message /> 
+        <Welcome name="Laura" /> 
     </div>
     )
-}{/* it renders only the Message */}
+}{/* When I pass my name, it renders as Welcome, Laura! */}
+{/* When I doesn't pass any name, it renders as Welcome, Guest! (default) */}
