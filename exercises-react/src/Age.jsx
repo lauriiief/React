@@ -1,4 +1,4 @@
-export function Age({ age= 'undefined'}) {
+export function Age({ age }) {
     return (
         <div>
                 <p>Your age is { age }</p>
