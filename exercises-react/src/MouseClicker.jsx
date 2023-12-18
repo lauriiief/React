@@ -4,6 +4,8 @@ export function MouseClicker() {
         let image = button.firstChild;
         let src = image.getAttribute("src");
         console.log(src);
+        //console.log(event.currentTarget.src);
+        //event.stopPropagation();
     }
 
     return (
