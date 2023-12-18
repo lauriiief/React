@@ -1,4 +1,5 @@
 import { AlertClock } from "./AlertClock";
+import { Clock } from "./Clock";
 import { Counter } from "./Counter";
 import { Hello } from "./Hello";
 import { Message } from "./Message";
@@ -20,6 +21,7 @@ export function App(){
         <Welcome name="Laura" age={40} /> 
         <AlertClock/>
         <Counter/>
+        <Clock/>
     </div>
     )
 }{/* When I pass my name, it renders as Welcome, Laura! */}
