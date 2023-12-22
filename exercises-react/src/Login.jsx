@@ -8,7 +8,7 @@ function createData(){
     }
 }
 
-export function Login() {
+export function Login({loginFunction}) { // callback = una funcion que se pasa como propiedad
     const [data, setData] = useState(createData())
 
     function handleInputChange(event) {
@@ -30,7 +30,7 @@ export function Login() {
             <input name='username' value={data.username} onChange={handleInputChange} />
             <input name='password' type='password' value={data.password} onChange={handleInputChange} />
             <input name="remember" type="checkbox" checked={data.remember} onChange={handleInputChange}/>remember
-            <button disabled={!data.username || !data.password}>Login</button>        
+            <button disabled={!data.username || !data.password} onClick={() => loginFunction(data)}>Login</button>  {/* pasamos la funcion con una arrow function porque sino se estaria ejecutando todo el rato */}      
         </div>
     )
 }

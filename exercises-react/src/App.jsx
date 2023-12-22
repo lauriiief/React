@@ -19,6 +19,11 @@ import { Welcome } from "./Welcome";
 } */}
 
 export function App(){
+
+    function onLogin(data){
+        console.log(data);
+    }
+
     return (
     <div>
         <Welcome name="Laura" age={40} /> 
@@ -26,7 +31,7 @@ export function App(){
         <Counter/>
         <MouseClicker/>
         <Clock/>
-        <Login/>
+        <Login loginFunction={onLogin}/>
         <InteractiveWelcome/>
     </div>
     )
