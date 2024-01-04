@@ -36,16 +36,9 @@ export function Login({loginFunction}) { // callback = una funcion que se pasa c
         }
     }
 
-    function handleSubmit(event){
-        event.preventDefault();
-        if(data.username && data.password){
-            loginFunction(data);
-        }
-    }
-
     return (
         <div>
-            <form id="myForm">
+            <form id="myForm" onSubmit={handleSubmit}>
                 <p>Inside form element</p>
                 <input name="username" type="text" value={data.username} onChange={handleInputChange}/>
                 <input name='password' type='password' value={data.password} onChange={handleInputChange} />
@@ -54,12 +47,14 @@ export function Login({loginFunction}) { // callback = una funcion que se pasa c
                 <input type="submit" value="Login"/>
             </form>
 
-            <p>Outside form element</p>
+            {/*
             <input name='username' value={data.username} onChange={handleInputChange} />
             <input name='password' type='password' value={data.password} onChange={handleInputChange} />
             <input name="remember" type="checkbox" checked={data.remember} onChange={handleInputChange}/>remember
-            <button disabled={!data.username || !data.password} onClick={() => loginFunction(data)}>Login</button>  {/* pasamos la funcion con una arrow function porque sino se estaria ejecutando todo el rato */}      
+            <button disabled={!data.username || !data.password} onClick={() => loginFunction(data)}>Login</button>   pasamos la funcion con una arrow function porque sino se estaria ejecutando todo el rato       
             <button onClick={handleReset}>Reset</button>
+            */}
+            
         </div>
     )
 }

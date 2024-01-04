@@ -6,6 +6,7 @@ import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Login } from "./Login";
 import { Message } from "./Message";
 import { MouseClicker } from "./MouseClicker";
+import { UncontrolledLogin } from "./UncontrolledLogin";
 import { Welcome } from "./Welcome";
 
 {/*export function App() {
@@ -33,6 +34,7 @@ export function App(){
         <Clock/>
         <Login loginFunction={onLogin}/>
         <InteractiveWelcome/>
+        <UncontrolledLogin/>
     </div>
     )
 }{/* When I pass my name, it renders as Welcome, Laura! */}
