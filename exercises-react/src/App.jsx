@@ -1,6 +1,7 @@
 import { AlertClock } from "./AlertClock";
 import { Clock } from "./Clock";
 import { Counter } from "./Counter";
+import FocusableInput from "./FocusableInput";
 import { Hello } from "./Hello";
 import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Login } from "./Login";
@@ -35,6 +36,7 @@ export function App(){
         <Login loginFunction={onLogin}/>
         <InteractiveWelcome/>
         <UncontrolledLogin/>
+        <FocusableInput/>
     </div>
     )
 }{/* When I pass my name, it renders as Welcome, Laura! */}
