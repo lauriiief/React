@@ -12,6 +12,7 @@ import { UncontrolledLogin } from "./UncontrolledLogin";
 import { Welcome } from "./Welcome";
 import ComponentMouted from "./ComponentMouted";
 import { Colors } from "./Colors";
+import { ToDoList } from "./TodoList";
 
 {/*export function App() {
     return (
@@ -49,6 +50,7 @@ export function App(){
             ]} />
             <FocusableInput/>
             <ComponentMouted/>
+            <ToDoList />
         </StrictMode>
     </div>
     )
