@@ -11,6 +11,7 @@ import { MouseClicker } from "./MouseClicker";
 import { UncontrolledLogin } from "./UncontrolledLogin";
 import { Welcome } from "./Welcome";
 import ComponentMouted from "./ComponentMouted";
+import { Colors } from "./Colors";
 
 {/*export function App() {
     return (
@@ -39,6 +40,13 @@ export function App(){
             <Login loginFunction={onLogin}/>
             <InteractiveWelcome/>
             <UncontrolledLogin/>
+            <Colors colors={[
+                {id: 1, name: 'red'},
+                {id: 2, name: 'yellow'},
+                {id: 3, name: 'blue'},
+                {id: 4, name: 'green'},
+                {id: 5, name: 'purple'},
+            ]} />
             <FocusableInput/>
             <ComponentMouted/>
         </StrictMode>
