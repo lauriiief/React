@@ -12,11 +12,18 @@ export function ToDoList(){
         setInput('');
     }
 
+    const handleRemoveTodo = (index) => {
+        setTodos(todos.filter((_, todoIndex) => todoIndex !== index));
+    }
+
     return(
         <div>
             <ul>
                 {todos.map((todo, index) => (
-                <li key={index}>{todo}</li>
+                <li key={index}>
+                    {todo}
+                    <button onClick={() => handleRemoveTodo(index)}>Remove</button>
+                </li>
                 ))}
             </ul>
             <input value={input} onChange={e => setInput(e.target.value)} />
