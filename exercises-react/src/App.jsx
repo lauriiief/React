@@ -1,3 +1,4 @@
+import { StrictMode } from "react";
 import { AlertClock } from "./AlertClock";
 import { Clock } from "./Clock";
 import { Counter } from "./Counter";
@@ -9,6 +10,7 @@ import { Message } from "./Message";
 import { MouseClicker } from "./MouseClicker";
 import { UncontrolledLogin } from "./UncontrolledLogin";
 import { Welcome } from "./Welcome";
+import ComponentMouted from "./ComponentMouted";
 
 {/*export function App() {
     return (
@@ -28,15 +30,18 @@ export function App(){
 
     return (
     <div>
-        <Welcome name="Laura" age={40} /> 
-        <AlertClock/>
-        <Counter/>
-        <MouseClicker/>
-        <Clock/>
-        <Login loginFunction={onLogin}/>
-        <InteractiveWelcome/>
-        <UncontrolledLogin/>
-        <FocusableInput/>
+        <StrictMode>
+            <Welcome name="Laura" age={40} /> 
+            <AlertClock/>
+            <Counter/>
+            <MouseClicker/>
+            <Clock/>
+            <Login loginFunction={onLogin}/>
+            <InteractiveWelcome/>
+            <UncontrolledLogin/>
+            <FocusableInput/>
+            <ComponentMouted/>
+        </StrictMode>
     </div>
     )
 }{/* When I pass my name, it renders as Welcome, Laura! */}
