@@ -6,6 +6,9 @@ export function ToDoList(){
 
     const handleAddTodo = () => {
         setTodos([...todos, input]);
+    }
+
+    const handleResetTodo = () => {
         setInput('');
     }
 
@@ -18,6 +21,7 @@ export function ToDoList(){
             </ul>
             <input value={input} onChange={e => setInput(e.target.value)} />
             <button onClick={handleAddTodo}>Add</button>
+            <button onClick={handleResetTodo}>Reset</button>
         </div>
     )
 }
