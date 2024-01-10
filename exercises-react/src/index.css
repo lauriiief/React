@@ -2,3 +2,18 @@
     background-color: azure;
     border: 5px solid blueviolet;
 }
+
+.container{
+    background-color: white;
+    border: 5px solid red;
+}
+
+.app-content-hidden{
+    display: none;
+}
+
+.button{
+    background-color: white;
+    color: red;
+    border: 2px solid red;
+}

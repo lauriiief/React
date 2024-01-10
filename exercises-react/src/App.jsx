@@ -13,6 +13,7 @@ import { Welcome } from "./Welcome";
 import ComponentMouted from "./ComponentMouted";
 import { Colors } from "./Colors";
 import { ToDoList } from "./TodoList";
+import { Container } from "./Container";
 
 {/*export function App() {
     return (
@@ -31,8 +32,9 @@ export function App(){
     }
 
     return (
-    <div>
-        <StrictMode>
+    <StrictMode>
+    <Container title={<h1>My App</h1>}>
+        
             <Welcome name="Laura" age={40} /> 
             <AlertClock/>
             <Counter/>
@@ -51,8 +53,9 @@ export function App(){
             <FocusableInput/>
             <ComponentMouted/>
             <ToDoList />
-        </StrictMode>
-    </div>
+        
+    </Container>
+    </StrictMode>
     )
 }{/* When I pass my name, it renders as Welcome, Laura! */}
 {/* When I doesn't pass any name, it renders as Welcome, Guest! (default) */}
