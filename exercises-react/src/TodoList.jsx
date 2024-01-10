@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useState } from "react";
+import classes from "./TodoList.module.scss"
 
 export function ToDoList(){
     const [todos, setTodos] = useState([]);
@@ -27,8 +28,8 @@ export function ToDoList(){
                 ))}
             </ul>
             <input value={input} onChange={e => setInput(e.target.value)} />
-            <button onClick={handleAddTodo}>Add</button>
-            <button onClick={handleResetTodo}>Reset</button>
+            <button className={classes.button} onClick={handleAddTodo}>Add</button>
+            <button className={classes.button} onClick={handleResetTodo}>Reset</button>
         </div>
     )
 }
