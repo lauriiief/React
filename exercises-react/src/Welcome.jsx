@@ -1,8 +1,9 @@
 import { Age } from "./Age"
+import "./index.css"
 
 export function Welcome({ name, age}) {
     return (
-        <div>
+        <div className="welcome">
                 <p>Welcome, <strong>{ name }</strong>!</p>
                 {/*<p>You are { age } years old</p>*/}
                 { age >= 18 && <Age age={age}/>}
