@@ -14,6 +14,8 @@ import ComponentMouted from "./ComponentMouted";
 import { Colors } from "./Colors";
 import { ToDoList } from "./TodoList";
 import { Container } from "./Container";
+import { LanguageContext } from "./LanguageContext";
+import { useState } from "react";
 
 {/*export function App() {
     return (
@@ -31,14 +33,26 @@ export function App(){
         console.log(data);
     }
 
+    const [language, setlanguage] = useState("en")
+
+    function handleSetLanguage(event){
+        setlanguage(event.target.value)
+    }
+
     return (
     <StrictMode>
+    <select value={language} onChange={handleSetLanguage}>
+        <option value="en">English</option>
+        <option value="es">Español</option>
+    </select>
+    
     <Container title={<h1>My App</h1>}>
-        
+        <LanguageContext.Provider value={language}>
             <Welcome name="Laura" age={40} /> 
             <AlertClock/>
             <Counter/>
             <MouseClicker/>
+            
             <Clock/>
             <Login loginFunction={onLogin}/>
             <InteractiveWelcome/>
@@ -53,7 +67,7 @@ export function App(){
             <FocusableInput/>
             <ComponentMouted/>
             <ToDoList />
-        
+        </LanguageContext.Provider>
     </Container>
     </StrictMode>
     )
