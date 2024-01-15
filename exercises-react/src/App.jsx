@@ -16,7 +16,7 @@ import { ToDoList } from "./TodoList";
 import { Container } from "./Container";
 import { LanguageContext } from "./LanguageContext";
 import { useState } from "react";
-import { GithubUser } from "./GithubUser";
+import { GithubUser, GithubUsers } from "./GithubUser";
 
 {/*export function App() {
     return (
@@ -50,7 +50,7 @@ export function App(){
     <Container title={<h1>My App</h1>}>
         <LanguageContext.Provider value={language}>
             <Welcome name="Laura" age={40} /> 
-            <GithubUser username={"lauriiief"} />
+            {/*<GithubUser username={"lauriiief"} />*/}
             <AlertClock/>
             <Counter/>
             <MouseClicker/>
@@ -69,6 +69,7 @@ export function App(){
             <FocusableInput/>
             <ComponentMouted/>
             <ToDoList />
+            <GithubUsers />
         </LanguageContext.Provider>
     </Container>
     </StrictMode>
