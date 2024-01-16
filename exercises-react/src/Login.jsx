@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { useLogin } from "./useLogin"
 
 function createData(){
     return {
@@ -9,32 +10,7 @@ function createData(){
 }
 
 export function Login({loginFunction}) { // callback = una funcion que se pasa como propiedad
-    const [data, setData] = useState(createData())
-
-    function handleInputChange(event) {
-        const name = event.target.name
-        const value = event.target.value
-        const checked = event.target.checked
-        const type = event.target.type
-
-        setData(d => {
-            return {
-                ...d,
-                [name]: type === 'checkbox' ? checked : value
-            }
-        })
-    }
-
-    function handleReset(){
-        setData(createData())
-    }
-
-    function handleSubmit(event){
-        event.preventDefault();
-        if(data.username && data.password){
-            loginFunction(data);
-        }
-    }
+    const {data, handleInputChange, handleReset, handleSubmit} = useLogin(loginFunction)
 
     return (
         <div>
