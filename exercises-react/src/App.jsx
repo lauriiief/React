@@ -69,7 +69,7 @@ export function App(){
             <FocusableInput/>
             <ComponentMouted/>
             <ToDoList />
-            <GithubUsers />
+            <GithubUser username={"lauriiief"} />
         </LanguageContext.Provider>
     </Container>
     </StrictMode>
