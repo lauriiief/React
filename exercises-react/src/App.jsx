@@ -17,6 +17,7 @@ import { Container } from "./Container";
 import { LanguageContext } from "./LanguageContext";
 import { useState } from "react";
 import { GithubUser, GithubUsers } from "./GithubUser";
+import { FilteredList } from "./FilteredList";
 
 {/*export function App() {
     return (
@@ -70,6 +71,13 @@ export function App(){
             <ComponentMouted/>
             <ToDoList />
             <GithubUser username={"lauriiief"} />
+            <FilteredList list={[
+                {id: 1, name: 'Laura', age: 20},
+                {id: 2, name: 'David', age: 15},
+                {id: 3, name: 'Noelia', age: 13},
+                {id: 4, name: 'Julia', age: 25},
+                {id: 5, name: 'Laia', age: 23},
+            ]} />
         </LanguageContext.Provider>
     </Container>
     </StrictMode>
