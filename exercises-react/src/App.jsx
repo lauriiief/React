@@ -18,6 +18,8 @@ import { LanguageContext } from "./LanguageContext";
 import { useState } from "react";
 import { GithubUser, GithubUsers } from "./GithubUser";
 import { FilteredList } from "./FilteredList";
+import { List, FormComponent, NavigationComponent, ToggleCheckpoint} from './PracticeCheckpoint'
+
 
 {/*export function App() {
     return (
@@ -77,7 +79,7 @@ export function App(){
                 {id: 3, name: 'Noelia', age: 13},
                 {id: 4, name: 'Julia', age: 25},
                 {id: 5, name: 'Laia', age: 23},
-            ]} />
+            ]} /> 
         </LanguageContext.Provider>
     </Container>
     </StrictMode>
