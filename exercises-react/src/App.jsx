@@ -55,10 +55,16 @@ export function App(){
             
         </div>}>
         <Routes>
+            <Route path="/" />
             <Route path="/:name" element={<Welcome />} />
             <Route path="/counter" element={<Counter />} />
             <Route path="users/:username" element={<GithubUser />} />
+            <Route path="*" element={<div>
+                    <p>Not Found</p>
+                    <Link to='/'>Go Home</Link>
+                    </div>} />
         </Routes>
+        
     </Container>
     </StrictMode>
     )
