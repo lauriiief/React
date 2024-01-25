@@ -1,7 +1,9 @@
+import { useParams } from "react-router-dom"
 import { Age } from "./Age"
 import "./index.css"
 
-export function Welcome({ name, age}) {
+export function Welcome({ age }) {
+    const { name = 'Laura'} = useParams()
     return (
         <div className="welcome">
                 <p>Welcome, <strong>{ name }</strong>!</p>

@@ -19,6 +19,7 @@ import { useState } from "react";
 import { GithubUser, GithubUsers } from "./GithubUser";
 import { FilteredList } from "./FilteredList";
 import { List, FormComponent, NavigationComponent, ToggleCheckpoint} from './PracticeCheckpoint'
+import { Route, Routes } from "react-router-dom";
 
 
 {/*export function App() {
@@ -44,43 +45,11 @@ export function App(){
     }
 
     return (
-    <StrictMode>
-    <select value={language} onChange={handleSetLanguage}>
-        <option value="en">English</option>
-        <option value="es">Español</option>
-    </select>
-    
+    <StrictMode>    
     <Container title={<h1>My App</h1>}>
-        <LanguageContext.Provider value={language}>
-            <Welcome name="Laura" age={40} /> 
-            {/*<GithubUser username={"lauriiief"} />*/}
-            <AlertClock/>
-            <Counter/>
-            <MouseClicker/>
-            
-            <Clock/>
-            <Login loginFunction={onLogin}/>
-            <InteractiveWelcome/>
-            <UncontrolledLogin/>
-            <Colors colors={[
-                {id: 1, name: 'red'},
-                {id: 2, name: 'yellow'},
-                {id: 3, name: 'blue'},
-                {id: 4, name: 'green'},
-                {id: 5, name: 'purple'},
-            ]} />
-            <FocusableInput/>
-            <ComponentMouted/>
-            <ToDoList />
-            <GithubUser username={"lauriiief"} />
-            <FilteredList list={[
-                {id: 1, name: 'Laura', age: 20},
-                {id: 2, name: 'David', age: 15},
-                {id: 3, name: 'Noelia', age: 13},
-                {id: 4, name: 'Julia', age: 25},
-                {id: 5, name: 'Laia', age: 23},
-            ]} /> 
-        </LanguageContext.Provider>
+        <Routes>
+            <Route path="/:name" element={<Welcome />} />
+        </Routes>
     </Container>
     </StrictMode>
     )
