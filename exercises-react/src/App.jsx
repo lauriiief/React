@@ -49,6 +49,7 @@ export function App(){
     <Container title={<h1>My App</h1>}>
         <Routes>
             <Route path="/:name" element={<Welcome />} />
+            <Route path="/counter" element={<Counter />} />
         </Routes>
     </Container>
     </StrictMode>
