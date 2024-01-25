@@ -50,6 +50,7 @@ export function App(){
         <Routes>
             <Route path="/:name" element={<Welcome />} />
             <Route path="/counter" element={<Counter />} />
+            <Route path="users/:username" element={<GithubUser />} />
         </Routes>
     </Container>
     </StrictMode>
