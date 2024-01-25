@@ -20,6 +20,7 @@ import { GithubUser, GithubUsers } from "./GithubUser";
 import { FilteredList } from "./FilteredList";
 import { List, FormComponent, NavigationComponent, ToggleCheckpoint} from './PracticeCheckpoint'
 import { Link, Route, Routes } from "react-router-dom";
+import { GithubUserList } from "./GithubUserList";
 
 
 {/*export function App() {
@@ -50,7 +51,7 @@ export function App(){
         <div>
             <h1>My Awesome App</h1>
             <div>
-                <Link to='/'>Home</Link> | <Link to='/:name'>Welcome</Link> | <Link to='/counter'>Counter</Link> | <Link to='users/:username'>Github Users</Link>
+                <Link to='/'>Home</Link> | <Link to='/:name'>Welcome</Link> | <Link to='/counter'>Counter</Link> | <Link to='/users'>Github Users</Link>
             </div>
             
         </div>}>
@@ -58,7 +59,9 @@ export function App(){
             <Route path="/" />
             <Route path="/:name" element={<Welcome />} />
             <Route path="/counter" element={<Counter />} />
-            <Route path="users/:username" element={<GithubUser />} />
+            <Route path="/users" element={<GithubUserList />} >
+                <Route path=":username" element={<GithubUser />} />
+            </Route>
             <Route path="*" element={<div>
                     <p>Not Found</p>
                     <Link to='/'>Go Home</Link>
