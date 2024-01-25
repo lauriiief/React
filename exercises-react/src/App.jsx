@@ -19,7 +19,7 @@ import { useState } from "react";
 import { GithubUser, GithubUsers } from "./GithubUser";
 import { FilteredList } from "./FilteredList";
 import { List, FormComponent, NavigationComponent, ToggleCheckpoint} from './PracticeCheckpoint'
-import { Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 
 
 {/*export function App() {
@@ -46,7 +46,14 @@ export function App(){
 
     return (
     <StrictMode>    
-    <Container title={<h1>My App</h1>}>
+    <Container title={
+        <div>
+            <h1>My Awesome App</h1>
+            <div>
+                <Link to='/'>Home</Link> | <Link to='/:name'>Welcome</Link> | <Link to='/counter'>Counter</Link> | <Link to='users/:username'>Github Users</Link>
+            </div>
+            
+        </div>}>
         <Routes>
             <Route path="/:name" element={<Welcome />} />
             <Route path="/counter" element={<Counter />} />
