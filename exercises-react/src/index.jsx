@@ -4,7 +4,8 @@ import { App } from "./App"
 
 import "./index.css"
 import { AppCheckpoint } from "./AppCheckpoint";
+import { Root } from "./Root";
 
 const HelloElement = <Hello />
 
-createRoot(document.getElementById("root")).render(<AppCheckpoint />)
+createRoot(document.getElementById("root")).render(<Root />)
