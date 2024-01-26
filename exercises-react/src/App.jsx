@@ -51,7 +51,7 @@ export function App(){
         <div>
             <h1>My Awesome App</h1>
             <div>
-                <Link to='/'>Home</Link> | <Link to='/:name'>Welcome</Link> | <Link to='/counter'>Counter</Link> | <Link to='/users'>Github Users</Link>
+                <Link to='/'>Home</Link> | <Link to={`/${'Laura'}`}>Welcome</Link> | <Link to='/counter'>Counter</Link> | <Link to='/users'>Github Users</Link>
             </div>
             
         </div>}>
