@@ -16,11 +16,11 @@ import { ToDoList } from "./TodoList";
 import { Container } from "./Container";
 import { LanguageContext } from "./LanguageContext";
 import { useState } from "react";
-import { GithubUser, GithubUsers } from "./GithubUser";
 import { FilteredList } from "./FilteredList";
 import { List, FormComponent, NavigationComponent, ToggleCheckpoint} from './PracticeCheckpoint'
 import { Link, Route, Routes } from "react-router-dom";
 import { GithubUserList } from "./GithubUserList";
+import { GithubUser, GithubUsers } from "./GithubUser";
 
 
 {/*export function App() {

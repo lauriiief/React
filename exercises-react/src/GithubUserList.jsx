@@ -1,6 +1,8 @@
-import { Link, Outlet } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 
 export function GithubUserList() {
+    const navigate = useNavigate()
 
     async function gettingList() {
         const response = await fetch(`https://api.github.com/users`);
@@ -9,14 +11,29 @@ export function GithubUserList() {
         return json
     }
     
-    const UsersList = gettingList()
+    const [UsersList, setUsersList] = useState([]);
+
+    useEffect(() => {
+        async function fetchData() {
+            const users = await gettingList();
+            setUsersList(users);
+        }
+
+        fetchData();
+    }, []);
+
+    function handleClick(user) {
+        navigate(`/users/${user.login}`);
+    }
 
     return (
         <div>
             <ul>
                 {UsersList.map((user, index) => (
                 <li key={index}>
-                    {<Link to={`/users/${user.login}`}>{user.login}</Link>}
+                    <button onClick={() => handleClick(user)}>
+                        {user.login}
+                    </button>
                 </li>
                 ))}
             </ul>
