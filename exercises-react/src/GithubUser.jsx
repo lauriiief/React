@@ -5,19 +5,19 @@ import classes from './GithubUserList.module.scss'
 
 export function GithubUser(){
     const { username } = useParams()
-    const {data, loading, error, onFetchUser } = useGithubUser(username)
+    const {users, loading, error, onFetchUser } = useGithubUser(username)
         
     return (
     <div className={classes.card}>
         {loading && <p>Loading...</p>}
         {error && <p>There has been an error</p>}
-        {data && <img className={classes.card_image} src={data.avatar_url} />}
-        {data && <p>id: {data.id}</p>}
-        {data && <p>name: {data.name} </p>}
-        {data && <p>login: {data.login}</p>} 
-        {data && <p>url: {data.html_url}</p>}
-        {data && <p>followers: {data.followers}</p>} 
-        {data && <p>public repos: {data.public_repos}</p>}
+        {users && <img className={classes.card_image} src={users.avatar_url} />}
+        {users && <p>id: {users.id}</p>}
+        {users && <p>name: {users.name} </p>}
+        {users && <p>login: {users.login}</p>} 
+        {users && <p>url: {users.html_url}</p>}
+        {users && <p>followers: {users.followers}</p>} 
+        {users && <p>public repos: {users.public_repos}</p>}
     </div>)
 }
 
