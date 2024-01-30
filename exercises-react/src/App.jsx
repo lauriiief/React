@@ -51,7 +51,7 @@ export function App(){
         <div>
             <h1>My Awesome App</h1>
             <div>
-                <Link to='/'>Home</Link> | <Link to='/Laura'>Welcome</Link> | <Link to='/counter'>Counter</Link> | <Link to='/users'>Github Users</Link>
+                <Link to='/'>Home</Link> | <Link to={`/${'Laura'}`}>Welcome</Link> | <Link to='/counter'>Counter</Link> | <Link to='/users'>Github Users</Link>
             </div>
             
         </div>}>
@@ -61,6 +61,7 @@ export function App(){
             <Route path="/counter" element={<Counter />} />
             <Route path="/users" element={<GithubUserList />} >
                 <Route path=":username" element={<GithubUser />} />
+                <Route path="addUser" element={<GithubUsers />} />
             </Route>
             <Route path="*" element={<div>
                     <p>Not Found</p>

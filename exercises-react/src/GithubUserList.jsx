@@ -43,6 +43,11 @@ export function GithubUserList() {
                 </li>
                 ))}
             </ul>
+
+            <Link to={'addUser'}>Add a user and select it</Link>
+
+            <hr/>
+
             <Outlet />
             <Link to='/users/lauriiief'>Add a user to the path and search it</Link>
         </div>
