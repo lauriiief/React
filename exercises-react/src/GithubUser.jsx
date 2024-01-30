@@ -18,6 +18,7 @@ export function GithubUser(){
         {users && <p>url: {users.html_url}</p>}
         {users && <p>followers: {users.followers}</p>} 
         {users && <p>public repos: {users.public_repos}</p>}
+        <button onClick={onFetchUser}>Refresh</button>
     </div>)
 }
 
