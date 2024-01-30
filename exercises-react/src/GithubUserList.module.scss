@@ -1,0 +1,17 @@
+
+.div_addflex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card_image{
+    width: 150px;
+    height: 150px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}

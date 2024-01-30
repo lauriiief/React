@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
-import { Link, Outlet, useNavigate } from "react-router-dom";
+import { Link, Outlet, useNavigate, useParams } from "react-router-dom";
+import { GithubUsers } from "./GithubUser";
+import classes from "./GithubUserList.module.scss"
 
 export function GithubUserList() {
+    //const { username } = useParams()
     const navigate = useNavigate()
 
     async function gettingList() {
@@ -13,6 +16,7 @@ export function GithubUserList() {
     
     const [UsersList, setUsersList] = useState([]);
 
+    
     useEffect(() => {
         async function fetchData() {
             const users = await gettingList();
@@ -24,10 +28,12 @@ export function GithubUserList() {
 
     function handleClick(user) {
         navigate(`/users/${user.login}`);
+
     }
+       
 
     return (
-        <div>
+        <div className={classes.div_addflex}>
             <ul>
                 {UsersList.map((user, index) => (
                 <li key={index}>
@@ -38,6 +44,7 @@ export function GithubUserList() {
                 ))}
             </ul>
             <Outlet />
+            <Link to='/users/lauriiief'>Add a user to the path and search it</Link>
         </div>
     )
 }
